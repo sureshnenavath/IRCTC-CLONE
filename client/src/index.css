@@ -2,7 +2,6 @@
 
 :root {
   --primary: #0056b3;
-  /* Classic Blue */
   --primary-hover: #004494;
   --secondary: #6c757d;
   --accent: #ffc107;
@@ -39,7 +38,6 @@ button {
   font-family: inherit;
 }
 
-/* Global Utilities */
 .container {
   max-width: 1200px;
   margin: 0 auto;

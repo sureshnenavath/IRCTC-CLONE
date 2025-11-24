@@ -31,15 +31,3 @@
     flex: 1;
 }
 
-.features-grid {
-    margin-top: 60px;
-}
-
-.feature-card h3 {
-    color: var(--primary);
-    margin-bottom: 10px;
-}
-
-.feature-card p {
-    color: var(--text-muted);
-}

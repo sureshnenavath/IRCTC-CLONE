@@ -11,7 +11,6 @@ const DB_FILE = path.join(__dirname, 'db.json');
 app.use(cors());
 app.use(bodyParser.json());
 
-// Helper to read/write DB
 const readDB = () => {
     if (!fs.existsSync(DB_FILE)) return { users: [], trains: [], bookings: [], passengers: [] };
     try {
@@ -23,14 +22,14 @@ const readDB = () => {
 };
 
 app.get('/', (req, res) => {
-    res.send('IRCTC Simulation API Running');
+    res.send('API Running');
 });
 
 const writeDB = (data) => {
     fs.writeFileSync(DB_FILE, JSON.stringify(data, null, 2));
 };
 
-// --- Auth ---
+
 app.post('/api/login', (req, res) => {
     const { email, password } = req.body;
     const db = readDB();

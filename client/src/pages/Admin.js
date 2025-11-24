@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 import './Admin.css';
 
 const Admin = () => {
+    const { user } = useAuth();
+    const navigate = useNavigate();
     const [train, setTrain] = useState({
         name: '',
         source: '',
@@ -12,9 +16,14 @@ const Admin = () => {
         classes: []
     });
 
+    useEffect(() => {
+        if (!user || user.role !== 'admin') {
+            navigate('/login');
+        }
+    }, [user, navigate]);
+
     const handleAddTrain = async (e) => {
         e.preventDefault();
-        // Simplified for demo: adding default classes/days if not specified
         const payload = {
             ...train,
             days: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],

@@ -43,30 +43,9 @@ const Home = () => {
                             required
                         />
                     </div>
-                    <div className="search-input-wrapper">
-                        <input
-                            type="date"
-                            className="input-field"
-                            required
-                        />
-                    </div>
+                    
                     <button type="submit" className="btn btn-primary">Search Trains</button>
                 </form>
-            </div>
-
-            <div className="grid features-grid">
-                <div className="card feature-card">
-                    <h3>⚡ Instant Booking</h3>
-                    <p>Book your tickets in seconds with our streamlined process.</p>
-                </div>
-                <div className="card feature-card">
-                    <h3>🛡️ Secure Payments</h3>
-                    <p>Your data is protected with state-of-the-art encryption.</p>
-                </div>
-                <div className="card feature-card">
-                    <h3>🚆 Live Status</h3>
-                    <p>Real-time updates on train schedules and availability.</p>
-                </div>
             </div>
         </div>
     );

@@ -14,23 +14,23 @@ const Navbar = () => {
 
     return (
         <nav className="navbar container">
-            <Link to="/" className="logo">IRCTC Sim</Link>
+            <Link to="/" className="logo">Train Booking System</Link>
             <div className="nav-links">
-                <Link to="/" className="nav-link">Home</Link>
-                <Link to="/pnr-status" className="nav-link">PNR Status</Link>
-                <Link to="/meals" className="nav-link">Meals</Link>
-                <Link to="/holidays" className="nav-link">Holidays</Link>
-                <Link to="/contact" className="nav-link">Contact</Link>
-
+                {(!user || user.role !== 'admin') && (
+                    <Link to="/" className="nav-link">Home</Link>
+                )}
                 {user ? (
                     <>
-                        <Link to="/dashboard" className="nav-link">My Bookings</Link>
+                        {user.role !== 'admin' && (
+                            <>
+                                <Link to="/dashboard" className="nav-link">My Bookings</Link>
+                                <Link to="/profile" className="btn-nav btn-profile">Profile</Link>
+                            </>
+                        )}
 
                         {user.role === 'admin' && (
                             <Link to="/admin" className="btn-nav btn-admin">Admin Panel</Link>
                         )}
-
-                        <Link to="/profile" className="btn-nav btn-profile">Profile</Link>
 
                         <button onClick={handleLogout} className="btn btn-secondary logout-btn">Logout</button>
                     </>

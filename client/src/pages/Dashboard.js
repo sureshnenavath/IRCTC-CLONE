@@ -12,11 +12,17 @@ const Dashboard = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
+        // Redirect admin users away from dashboard
+        if (user && user.role === 'admin') {
+            navigate('/admin');
+            return;
+        }
+        
         if (user) {
             fetchBookings();
             fetchPassengers();
         }
-    }, [user]);
+    }, [user, navigate]);
 
     const fetchBookings = async () => {
         const res = await fetch(`http://localhost:5000/api/bookings/${user.id}`);
@@ -51,7 +57,6 @@ const Dashboard = () => {
                     <h2 className="page-title" style={{ marginBottom: '5px' }}>Dashboard</h2>
                     <p style={{ color: 'var(--text-muted)' }}>Welcome back, {user?.name}</p>
                 </div>
-                {/* Wallet removed as requested */}
             </div>
 
             <div className="tabs">

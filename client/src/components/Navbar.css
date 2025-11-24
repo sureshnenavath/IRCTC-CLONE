@@ -8,11 +8,6 @@
     background-color: white;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary);
-}
 
 .nav-links {
     display: flex;
@@ -20,17 +15,7 @@
     align-items: center;
 }
 
-.nav-link {
-    color: var(--text);
-    font-weight: 500;
-    padding: 8px 12px;
-    border-radius: 4px;
-    transition: all 0.2s;
-}
 
-.nav-link:hover {
-    background-color: #f1f5f9;
-}
 
 /* Custom Buttons */
 .btn-nav {
@@ -42,30 +27,16 @@
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.btn-nav:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
 
-.btn-profile {
-    background-color: #6366f1;
-    /* Indigo */
-    color: white;
-}
+
 
 .btn-profile:hover {
     background-color: #4f46e5;
 }
 
-.btn-admin {
-    background-color: #ef4444;
-    /* Red */
-    color: white;
-}
 
-.btn-admin:hover {
-    background-color: #dc2626;
-}
+
+
 
 .logout-btn {
     padding: 8px 16px;

@@ -3,26 +3,35 @@
     {
       "id": 1,
       "name": "Admin User",
-      "email": "admin@irctc.com",
+      "email": "admin@admin.com",
       "password": "admin",
       "role": "admin",
       "wallet": 0,
       "savedPassengers": []
     },
     {
-      "id": 2,
-      "name": "Ravi",
-      "email": "ravi@test.com",
-      "password": "123",
+      "id": 1763968664693,
+      "name": "Suresh",
+      "email": "suresh@email.com",
+      "password": "1234",
       "role": "user",
-      "wallet": 5000,
+      "wallet": 10000,
       "savedPassengers": []
     },
     {
-      "id": 1763966184076,
-      "name": "ravi",
-      "email": "karinguravi37@gmail.com",
-      "password": "12345",
+      "id": 1763970726113,
+      "name": "Test",
+      "email": "test@email.com",
+      "password": "1234",
+      "role": "user",
+      "wallet": 10000,
+      "savedPassengers": []
+    },
+    {
+      "id": 1763971852691,
+      "name": "Testing11",
+      "email": "test@abc.com",
+      "password": "1234",
       "role": "user",
       "wallet": 10000,
       "savedPassengers": []
@@ -87,8 +96,128 @@
         "Wed",
         "Fri"
       ]
+    },
+    {
+      "id": 1763971218018,
+      "name": "Test1",
+      "source": "Hyderabad",
+      "destination": "Mumbai",
+      "departureTime": "15:29",
+      "arrivalTime": "18:30",
+      "classes": [
+        {
+          "type": "1A",
+          "price": 2000,
+          "seats": 50
+        },
+        {
+          "type": "2A",
+          "price": 1500,
+          "seats": 100
+        },
+        {
+          "type": "SL",
+          "price": 500,
+          "seats": 200
+        }
+      ],
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ]
+    },
+    {
+      "id": 1763973302038,
+      "name": "Indian Express",
+      "source": "Hyderabad",
+      "destination": "Banglore",
+      "departureTime": "14:04",
+      "arrivalTime": "00:04",
+      "classes": [
+        {
+          "type": "1A",
+          "price": 2000,
+          "seats": 50
+        },
+        {
+          "type": "2A",
+          "price": 1500,
+          "seats": 100
+        },
+        {
+          "type": "SL",
+          "price": 500,
+          "seats": 200
+        }
+      ],
+      "days": [
+        "Mon",
+        "Tue",
+        "Wed",
+        "Thu",
+        "Fri",
+        "Sat",
+        "Sun"
+      ]
     }
   ],
-  "bookings": [],
+  "bookings": [
+    {
+      "id": 1763969070323,
+      "userId": 1763968664693,
+      "trainId": "101",
+      "date": "2025-11-24",
+      "passengerDetails": [
+        {
+          "name": "Suresh",
+          "age": "20",
+          "gender": "Male",
+          "berth": "Upper"
+        }
+      ],
+      "totalAmount": 4000,
+      "status": "Booked",
+      "bookingDate": "2025-11-24T07:24:30.323Z"
+    },
+    {
+      "id": 1763971934890,
+      "userId": 1763971852691,
+      "trainId": "1763971218018",
+      "date": "2025-11-24",
+      "passengerDetails": [
+        {
+          "name": "Suresh",
+          "age": "22",
+          "gender": "Male",
+          "berth": "Middle"
+        }
+      ],
+      "totalAmount": 2000,
+      "status": "Booked",
+      "bookingDate": "2025-11-24T08:12:14.890Z"
+    },
+    {
+      "id": 1763971977362,
+      "userId": 1763971852691,
+      "trainId": "101",
+      "date": "2025-11-24",
+      "passengerDetails": [
+        {
+          "name": "Surya",
+          "age": "22",
+          "gender": "Male",
+          "berth": "Middle"
+        }
+      ],
+      "totalAmount": 2500,
+      "status": "Booked",
+      "bookingDate": "2025-11-24T08:12:57.362Z"
+    }
+  ],
   "passengers": []
 }
